@@ -1,6 +1,7 @@
-import { Star, CheckCircle, MapPin } from 'lucide-react';
+import { Star, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import VerifiedBadge from './VerifiedBadge';
 
 const businesses = [
   {
@@ -82,7 +83,7 @@ export default function FeaturedSection() {
                     <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900">
                       {business.name}
                       {business.verified && (
-                        <CheckCircle className="h-5 w-5 text-blue-500" />
+                        <VerifiedBadge className="h-6 w-6" />
                       )}
                     </h3>
                     <div className="mt-1 flex items-center gap-2 text-sm text-gray-500">

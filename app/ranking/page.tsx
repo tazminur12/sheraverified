@@ -1,5 +1,6 @@
-import { Star, CheckCircle, MapPin, Filter, SlidersHorizontal } from 'lucide-react';
+import { Star, MapPin, Filter, SlidersHorizontal } from 'lucide-react';
 import Link from 'next/link';
+import VerifiedBadge from '../components/VerifiedBadge';
 
 const businesses = [
   {
@@ -95,7 +96,7 @@ export default function RankingPage() {
 
                 <div>
                   <h3 className="mb-3 font-semibold text-gray-900">Location</h3>
-                  <select className="w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm outline-none focus:border-blue-500">
+                  <select title="Select Location" className="w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm outline-none focus:border-blue-500">
                     {locations.map((loc) => (
                       <option key={loc}>{loc}</option>
                     ))}
@@ -130,7 +131,7 @@ export default function RankingPage() {
               <span className="font-medium text-gray-900">{businesses.length} Results found</span>
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-500">Sort by:</span>
-                <select className="rounded-lg border-none bg-transparent text-sm font-bold text-gray-900 outline-none hover:text-blue-600">
+                <select title="Sort results" className="rounded-lg border-none bg-transparent text-sm font-bold text-gray-900 outline-none hover:text-blue-600">
                   <option>Shera Score (High to Low)</option>
                   <option>Most Reviewed</option>
                   <option>Newest Added</option>
@@ -154,7 +155,7 @@ export default function RankingPage() {
                        </span>
                        {business.verified && (
                          <span className="flex items-center gap-1 rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-bold text-green-700">
-                           <CheckCircle className="h-3 w-3" /> Verified
+                           <VerifiedBadge className="h-3 w-3" /> Verified
                          </span>
                        )}
                     </div>
