@@ -2,17 +2,17 @@ import { Search, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50 to-white py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-20 lg:py-32">
       <div className="container mx-auto px-4 text-center md:px-6">
         <div className="mx-auto max-w-3xl">
           <div className="mb-6 flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700">
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
               <ShieldCheck className="h-4 w-4" />
               Bangladesh's #1 Verification Platform
             </span>
           </div>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Find <span className="bg-gradient-to-r from-emerald-600 to-amber-500 bg-clip-text text-transparent">Trusted</span> Businesses <br />
+            Find <span className="text-blue-600">Trusted</span> Businesses <br />
             in Bangladesh
           </h1>
           <p className="mb-10 text-lg text-gray-600 sm:text-xl">
@@ -25,10 +25,10 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="What are you looking for? (e.g. Best Pizza, Dentist)"
-                className="h-14 w-full rounded-xl border border-gray-200 bg-white pl-12 pr-4 text-lg shadow-sm outline-none transition-all focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+                className="h-14 w-full rounded-xl border border-gray-200 bg-white pl-12 pr-4 text-lg shadow-sm outline-none transition-all focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               />
             </div>
-            <button className="h-14 rounded-xl bg-gradient-to-r from-emerald-600 to-amber-500 px-8 text-lg font-bold text-white shadow-lg transition-opacity hover:opacity-90">
+            <button className="h-14 rounded-xl bg-blue-600 px-8 text-lg font-bold text-white shadow-lg transition-colors hover:bg-blue-700">
               Search
             </button>
           </div>

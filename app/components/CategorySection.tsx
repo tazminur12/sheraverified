@@ -30,9 +30,9 @@ export default function CategorySection() {
             <Link
               key={category.name}
               href={category.href}
-              className="group flex flex-col items-center justify-center rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-emerald-100 hover:shadow-md"
+              className="group flex flex-col items-center justify-center rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-blue-100 hover:shadow-md"
             >
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all group-hover:bg-gradient-to-r group-hover:from-emerald-600 group-hover:to-amber-500 group-hover:text-white">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                 <category.icon className="h-7 w-7" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>

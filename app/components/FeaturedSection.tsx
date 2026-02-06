@@ -53,7 +53,7 @@ export default function FeaturedSection() {
           </div>
           <Link
             href="/ranking"
-            className="flex items-center gap-2 font-semibold text-emerald-600 hover:underline"
+            className="flex items-center gap-2 font-semibold text-blue-600 hover:underline"
           >
             View all rankings
           </Link>
@@ -82,7 +82,7 @@ export default function FeaturedSection() {
                     <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900">
                       {business.name}
                       {business.verified && (
-                        <CheckCircle className="h-5 w-5 text-emerald-500" />
+                        <CheckCircle className="h-5 w-5 text-blue-500" />
                       )}
                     </h3>
                     <div className="mt-1 flex items-center gap-2 text-sm text-gray-500">
@@ -91,9 +91,9 @@ export default function FeaturedSection() {
                     </div>
                   </div>
                   <div className="flex flex-col items-end">
-                    <div className="flex items-center gap-1 rounded-lg bg-emerald-100 px-2 py-1 text-emerald-700">
+                    <div className="flex items-center gap-1 rounded-lg bg-green-100 px-2 py-1 text-green-700">
                       <span className="font-bold">{business.rating}</span>
-                      <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+                      <Star className="h-3 w-3 fill-current" />
                     </div>
                     <span className="mt-1 text-xs text-gray-500">
                       {business.reviews} reviews
@@ -105,7 +105,7 @@ export default function FeaturedSection() {
                   {business.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700"
+                      className="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600"
                     >
                       {tag}
                     </span>

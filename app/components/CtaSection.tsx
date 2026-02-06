@@ -23,7 +23,7 @@ export default function CtaSection() {
                   'Premium Support',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 to-amber-500">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600">
                       <Check className="h-4 w-4 text-white" />
                     </div>
                     <span className="font-medium">{item}</span>
@@ -34,7 +34,7 @@ export default function CtaSection() {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/get-verified"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-amber-500 px-8 font-bold text-white transition-opacity hover:opacity-90"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 font-bold text-white transition-colors hover:bg-blue-700"
                 >
                   Get Verified
                   <ArrowRight className="h-4 w-4" />
@@ -50,8 +50,8 @@ export default function CtaSection() {
             
             <div className="relative hidden lg:block">
               {/* Abstract decorative elements */}
-              <div className="absolute right-0 top-10 h-64 w-64 rounded-full bg-emerald-500/20 blur-3xl"></div>
-              <div className="absolute bottom-0 left-10 h-64 w-64 rounded-full bg-amber-500/20 blur-3xl"></div>
+              <div className="absolute right-0 top-10 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl"></div>
+              <div className="absolute bottom-0 left-10 h-64 w-64 rounded-full bg-purple-500/20 blur-3xl"></div>
               
               <div className="relative z-10 flex h-full items-center justify-center">
                 <div className="w-full max-w-sm rounded-2xl bg-white/10 p-8 backdrop-blur-md">
@@ -70,10 +70,10 @@ export default function CtaSection() {
                    <div className="mt-6 flex items-center justify-between">
                       <div className="flex gap-1">
                         {[1, 2, 3, 4, 5].map(i => (
-                          <div key={i} className="h-4 w-4 rounded-sm bg-amber-400"></div>
+                          <div key={i} className="h-4 w-4 rounded-sm bg-yellow-400"></div>
                         ))}
                       </div>
-                      <div className="h-8 w-24 rounded-lg bg-gradient-to-r from-emerald-600 to-amber-500"></div>
+                      <div className="h-8 w-24 rounded-lg bg-blue-600"></div>
                    </div>
                 </div>
               </div>

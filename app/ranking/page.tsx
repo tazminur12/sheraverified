@@ -86,7 +86,7 @@ export default function RankingPage() {
                   <div className="space-y-2">
                     {categories.map((cat) => (
                       <label key={cat} className="flex items-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500" defaultChecked={cat === 'All'} />
+                        <input type="checkbox" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" defaultChecked={cat === 'All'} />
                         {cat}
                       </label>
                     ))}
@@ -95,7 +95,7 @@ export default function RankingPage() {
 
                 <div>
                   <h3 className="mb-3 font-semibold text-gray-900">Location</h3>
-                  <select className="w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm outline-none focus:border-emerald-500">
+                  <select className="w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm outline-none focus:border-blue-500">
                     {locations.map((loc) => (
                       <option key={loc}>{loc}</option>
                     ))}
@@ -106,18 +106,18 @@ export default function RankingPage() {
                   <h3 className="mb-3 font-semibold text-gray-900">Shera Score</h3>
                   <div className="space-y-2">
                     <label className="flex items-center gap-2 text-sm text-gray-600">
-                      <input type="radio" name="score" className="text-emerald-600" /> 90+ (Excellent)
+                      <input type="radio" name="score" className="text-blue-600" /> 90+ (Excellent)
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-600">
-                      <input type="radio" name="score" className="text-emerald-600" /> 80+ (Very Good)
+                      <input type="radio" name="score" className="text-blue-600" /> 80+ (Very Good)
                     </label>
                     <label className="flex items-center gap-2 text-sm text-gray-600">
-                      <input type="radio" name="score" className="text-emerald-600" /> 70+ (Good)
+                      <input type="radio" name="score" className="text-blue-600" /> 70+ (Good)
                     </label>
                   </div>
                 </div>
                 
-                <button className="w-full rounded-lg bg-gradient-to-r from-emerald-600 to-amber-500 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90">
+                <button className="w-full rounded-lg bg-blue-600 py-2.5 text-sm font-bold text-white transition-colors hover:bg-blue-700">
                   Apply Filters
                 </button>
               </div>
@@ -130,7 +130,7 @@ export default function RankingPage() {
               <span className="font-medium text-gray-900">{businesses.length} Results found</span>
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-500">Sort by:</span>
-                <select className="rounded-lg border-none bg-transparent text-sm font-bold text-gray-900 outline-none hover:text-emerald-600">
+                <select className="rounded-lg border-none bg-transparent text-sm font-bold text-gray-900 outline-none hover:text-blue-600">
                   <option>Shera Score (High to Low)</option>
                   <option>Most Reviewed</option>
                   <option>Newest Added</option>
@@ -140,7 +140,7 @@ export default function RankingPage() {
 
             <div className="space-y-4">
               {businesses.map((business, index) => (
-                <div key={business.id} className="group flex flex-col gap-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-emerald-200 hover:shadow-md sm:flex-row">
+                <div key={business.id} className="group flex flex-col gap-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-blue-200 hover:shadow-md sm:flex-row">
                   <div className="flex items-center justify-center sm:w-24 shrink-0">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-100 text-2xl font-bold text-gray-400">
                        #{index + 1}
@@ -149,16 +149,16 @@ export default function RankingPage() {
                   
                   <div className="flex-1">
                     <div className="mb-1 flex items-center gap-2">
-                       <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-bold text-emerald-600">
+                       <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-blue-600">
                          {business.category}
                        </span>
                        {business.verified && (
-                         <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-bold text-emerald-700">
+                         <span className="flex items-center gap-1 rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-bold text-green-700">
                            <CheckCircle className="h-3 w-3" /> Verified
                          </span>
                        )}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-600">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600">
                       <Link href={`/business/${business.id}`}>{business.name}</Link>
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">{business.description}</p>
@@ -168,7 +168,7 @@ export default function RankingPage() {
                         {business.location}
                       </div>
                       <div className="flex items-center gap-1">
-                         <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+                         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                          <span className="font-bold text-gray-900">{business.rating}</span>
                          <span>({business.reviews})</span>
                       </div>
@@ -177,10 +177,10 @@ export default function RankingPage() {
 
                   <div className="flex flex-col items-end justify-center gap-2 sm:border-l sm:border-gray-100 sm:pl-6">
                      <div className="text-center">
-                       <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-500">{business.score}</div>
+                       <div className="text-3xl font-extrabold text-blue-600">{business.score}</div>
                        <div className="text-xs font-medium text-gray-500">Shera Score</div>
                      </div>
-                     <Link href={`/business/${business.id}`} className="mt-2 w-full rounded-lg bg-gray-900 px-4 py-2 text-center text-sm font-bold text-white transition-opacity hover:opacity-90 hover:bg-gradient-to-r hover:from-emerald-600 hover:to-amber-500">
+                     <Link href={`/business/${business.id}`} className="mt-2 w-full rounded-lg bg-gray-900 px-4 py-2 text-center text-sm font-bold text-white transition-colors hover:bg-blue-600">
                        View Profile
                      </Link>
                   </div>
